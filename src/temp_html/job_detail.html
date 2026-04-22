@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JobNow - Chi tiết công việc</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#0e1840",
+                        "outline": "#757684",
+                        "on-tertiary-fixed-variant": "#783200",
+                        "surface-variant": "#e3e1eb",
+                        "on-primary-fixed-variant": "#173bab",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#a8b8ff",
+                        "secondary-fixed": "#dde1ff",
+                        "on-tertiary-container": "#ffa677",
+                        "inverse-primary": "#b8c4ff",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f4f2fc",
+                        "surface-container-high": "#e8e7f1",
+                        "secondary-fixed-dim": "#bbc4f6",
+                        "tertiary": "#5b2400",
+                        "primary": "#00288e",
+                        "surface": "#fbf8ff",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "primary-fixed": "#dde1ff",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dad9e3",
+                        "surface-container-highest": "#e3e1eb",
+                        "on-tertiary-fixed": "#341100",
+                        "on-surface-variant": "#444653",
+                        "inverse-surface": "#2f3037",
+                        "primary-container": "#1e40af",
+                        "on-secondary-container": "#4c5680",
+                        "secondary-container": "#c3ccfe",
+                        "on-secondary-fixed-variant": "#3b446e",
+                        "on-background": "#1a1b22",
+                        "secondary": "#525c87",
+                        "inverse-on-surface": "#f1f0fa",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-surface": "#1a1b22",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#3755c3",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fbf8ff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#001453",
+                        "background": "#fbf8ff",
+                        "surface-container": "#eeedf7",
+                        "tertiary-container": "#7f3500",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c4c5d5",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb690"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Be Vietnam Pro"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Be Vietnam Pro', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-blue-800 dark:text-blue-400 tracking-tighter">JobNow</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-blue-800 dark:text-blue-400 border-b-2 border-blue-800 dark:border-blue-400 pb-1 font-medium" href="#">Trang chủ</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 transition-colors font-medium" href="#">Tìm việc</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-600 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</button>
+<button class="p-2 text-slate-600 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full"></div>
+</nav>
+<main class="pt-24 pb-12 px-4 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Job Details -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Hero Section -->
+<div class="bg-surface-container-lowest rounded-xl p-8 overflow-hidden relative border-none">
+<div class="relative z-10">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-fixed rounded-full text-xs font-bold uppercase tracking-wider">Tuyển gấp</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold uppercase tracking-wider">Thời vụ</span>
+</div>
+<h1 class="text-4xl font-extrabold text-on-surface mb-6 tracking-tight leading-tight">Nhân Viên Tư Vấn Bán Hàng Tại Showroom - Ca Gãy</h1>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<div>
+<p class="text-xs text-outline font-medium">Mức lương</p>
+<p class="text-lg font-bold text-primary">12.000.000đ</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<p class="text-xs text-outline font-medium">Địa điểm</p>
+<p class="text-sm font-semibold">Quận 1, TP. HCM</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<div>
+<p class="text-xs text-outline font-medium">Thời gian</p>
+<p class="text-sm font-semibold">08:00 - 22:00</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">group</span>
+</div>
+<div>
+<p class="text-xs text-outline font-medium">Số lượng</p>
+<p class="text-sm font-semibold">05 người</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Ambient Light Background Effect -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-container/5 rounded-full blur-3xl"></div>
+</div>
+<!-- Job Description Content -->
+<div class="bg-surface-container-lowest rounded-xl p-8 space-y-10">
+<section>
+<h2 class="text-2xl font-bold text-on-surface mb-6 flex items-center gap-3">
+<span class="w-2 h-8 bg-primary rounded-full"></span>
+                            Mô tả công việc
+                        </h2>
+<ul class="space-y-4 text-on-surface-variant leading-relaxed">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" style="font-size: 20px;">check_circle</span>
+<span>Chào đón khách hàng, tìm hiểu nhu cầu và tư vấn các sản phẩm phù hợp tại cửa hàng.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" style="font-size: 20px;">check_circle</span>
+<span>Hướng dẫn khách hàng trải nghiệm sản phẩm trực tiếp tại showroom.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" style="font-size: 20px;">check_circle</span>
+<span>Kiểm tra hàng hóa, sắp xếp quầy kệ theo tiêu chuẩn trưng bày của thương hiệu.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" style="font-size: 20px;">check_circle</span>
+<span>Thực hiện thanh toán và hỗ trợ đóng gói sản phẩm cho khách hàng.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" style="font-size: 20px;">check_circle</span>
+<span>Tham gia các buổi đào tạo về kỹ năng bán hàng và kiến thức sản phẩm định kỳ.</span>
+</li>
+</ul>
+</section>
+<section>
+<h2 class="text-2xl font-bold text-on-surface mb-6 flex items-center gap-3">
+<span class="w-2 h-8 bg-primary rounded-full"></span>
+                            Yêu cầu ứng viên
+                        </h2>
+<ul class="space-y-4 text-on-surface-variant leading-relaxed">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" style="font-size: 20px;">radio_button_checked</span>
+<span>Độ tuổi từ 18 - 28, ngoại hình sáng, giao tiếp tốt.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" style="font-size: 20px;">radio_button_checked</span>
+<span>Ưu tiên ứng viên có kinh nghiệm bán hàng hoặc dịch vụ khách hàng.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" style="font-size: 20px;">radio_button_checked</span>
+<span>Nhanh nhẹn, trung thực và có tinh thần trách nhiệm cao.</span>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary flex-shrink-0 mt-1" style="font-size: 20px;">radio_button_checked</span>
+<span>Có thể làm việc xoay ca hoặc ca gãy theo yêu cầu.</span>
+</li>
+</ul>
+</section>
+</div>
+</div>
+<!-- Right Column: Sidebar -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Employer Profile Card -->
+<div class="bg-surface-container-high rounded-xl p-6 sticky top-24">
+<div class="flex items-center gap-4 mb-6">
+<img alt="Employer avatar" class="w-16 h-16 rounded-full object-cover border-4 border-white shadow-sm" data-alt="Close-up portrait of a professional smiling man in a business casual shirt with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAle5FAaZUjPEy9XB24_Ydy21t-plBYOOAU3BRHy1wWFgkil3zydHTbyexHy1maB0OJnQHscRoP-uhqapkBm0tv4_unhYJ3REvm6FGDqmlQkgCA3L_p-qrfGr7KENQgJeiAV34WXg_DCtjo7O0yp1RdmhuBdFXgzpi7SiZcYQ_G5wa_XMh7ZaJYlhp_ZpCiYeUhKythv99Yu9KLkV1OvTZwz168bpds7INR6_v6DYWVTF3hbDT-TXVXaRPeeivw6M_0NyKy6UnJaqWo"/>
+<div>
+<h3 class="text-lg font-bold text-on-surface">Nguyễn Minh Quân</h3>
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="text-sm font-bold text-on-surface ml-1">4.2</span>
+</div>
+</div>
+</div>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between text-sm py-2 border-b border-outline-variant/20">
+<span class="text-outline">Loại hình</span>
+<span class="font-semibold">Cá nhân</span>
+</div>
+<div class="flex justify-between text-sm py-2 border-b border-outline-variant/20">
+<span class="text-outline">Tin đã đăng</span>
+<span class="font-semibold">12 tin</span>
+</div>
+<div class="flex justify-between text-sm py-2">
+<span class="text-outline">Tham gia từ</span>
+<span class="font-semibold">03/2023</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full py-4 px-6 bg-gradient-to-r from-primary to-primary-container text-white rounded-xl font-bold text-lg shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                            Ứng tuyển ngay
+                            <span class="material-symbols-outlined">send</span>
+</button>
+<button class="w-full py-4 px-6 border border-primary/20 text-primary rounded-xl font-bold text-lg hover:bg-primary/5 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">chat</span>
+                            Nhắn tin
+                        </button>
+</div>
+<p class="text-xs text-center text-outline mt-6 italic">Gợi ý: Nhắn tin để trao đổi kỹ hơn về công việc trước khi ứng tuyển.</p>
+</div>
+<!-- Ad/Promotional Banner -->
+<div class="bg-primary p-6 rounded-xl text-white relative overflow-hidden">
+<h4 class="text-lg font-bold mb-2 relative z-10">Tăng tốc tìm việc?</h4>
+<p class="text-sm opacity-80 mb-4 relative z-10">Cập nhật hồ sơ để nhà tuyển dụng tìm thấy bạn nhanh hơn gấp 3 lần.</p>
+<a class="inline-block py-2 px-4 bg-white text-primary rounded-lg font-bold text-sm relative z-10" href="#">Cập nhật ngay</a>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl opacity-10 rotate-12">trending_up</span>
+</div>
+</div>
+</div>
+<!-- Similar Jobs Section -->
+<section class="mt-20">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-3xl font-extrabold text-on-surface mb-2">Công việc tương tự</h2>
+<p class="text-outline">Dựa trên sở thích và vị trí của bạn</p>
+</div>
+<a class="text-primary font-bold hover:underline flex items-center gap-1" href="#">
+                    Xem tất cả
+                    <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Bento Grid style for similar jobs -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl hover:shadow-xl transition-shadow group">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center overflow-hidden">
+<img alt="Retail shop" class="w-full h-full object-cover" data-alt="Elegant boutique storefront interior with warm lighting and minimalist shelves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2z1BRB9FKi-yPJWagKKCBpWjRPHhiB5nut0q3yvHPzOT1zFgWumw2pIV3lbT_PMecMGmGDzmyE0YcevXsZfbBGG0uwFrO-KjAM4T3keaDBltdl-Yh6lEyUrGzccSv1vfJgDbPA0LxgxMVWamGVIuuutb6iJRQnUoCKyvj0_7cVzL9nZw7J8WcBsNQdZ7d789xw22jUQMvDw1TqSQ7EPd5b2mOAB0RUGrXbqETNIOfQoVPuTy5Wxu7Pu7ciI-He-DX33uTkMwiCc8E"/>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors cursor-pointer">bookmark</span>
+</div>
+<h3 class="text-xl font-bold mb-6 text-on-surface leading-snug group-hover:text-primary transition-colors">Nhân viên kho thời vụ - Shop Quần Áo</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2 py-1 bg-secondary-container/30 text-secondary text-[10px] font-extrabold rounded">PHỔ THÔNG</span>
+<span class="px-2 py-1 bg-tertiary-container/30 text-tertiary text-[10px] font-extrabold rounded">PART-TIME</span>
+</div>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-lg font-bold text-primary">8.000.000đ</span>
+<span class="text-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Quận 3
+                        </span>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl hover:shadow-xl transition-shadow group border-2 border-primary/5">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center overflow-hidden">
+<img alt="Cafe icon" class="w-full h-full object-cover" data-alt="Cozy modern coffee shop counter with brass accents and industrial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBzehuxFLH-Jiitkrfsx6A_VD5T-demZJt050_-w108MKzOP64R2Yt_1vJ6dlfSpHGT0-PeFd9o_ModXo0dM_2nBsskZokpB-qYNeyH68R1dg_2r7nBeMDZJ4AG85RYi2LP_MDmv0qHMWv-FJHEt_9675gTdv4G1uhfqWUoLx68hmvH4w-_xn0TQiY_efPT9DBO2zwHq3HphtusQk4i6oikM06uI6tCnnkIgmeKwM_-a_fI57uGZGakl5IVet8YVVjVNYDf1rU9QTT"/>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors cursor-pointer">bookmark</span>
+</div>
+<h3 class="text-xl font-bold mb-6 text-on-surface leading-snug group-hover:text-primary transition-colors">Phục vụ quán Cafe Acoustic cuối tuần</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2 py-1 bg-secondary-container/30 text-secondary text-[10px] font-extrabold rounded">SINH VIÊN</span>
+<span class="px-2 py-1 bg-tertiary-container/30 text-tertiary text-[10px] font-extrabold rounded">URGENT</span>
+</div>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-lg font-bold text-primary">45.000đ/h</span>
+<span class="text-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Bình Thạnh
+                        </span>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl hover:shadow-xl transition-shadow group">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center overflow-hidden">
+<img alt="Hostess profile" class="w-full h-full object-cover" data-alt="Young professional woman in elegant business attire against a clean neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Yk8V-oa6dKJvVFBozHpyq-UwQ85aabn5512riga-u8x5MiPkE7VP_LqPwtaY9ycH8m3OWym0eB72co0zLgMDFnFVrBbpr-FTsfp6O2cTgM4kFtEIb54HwTY4nFOTAweEo-K9bN23Fs4rjiXkZPtwjeZSe-2aCu8cpWuRXidVpG1zzNYfk1CVR59BmlUP_UVaPXObH1ZCKF-wVhso2hrojiC3ulEFVO7JTqEhD8gv-njZ389V7c8tASnH3g9IsY7MSKByfXW0lrZP"/>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors cursor-pointer">bookmark</span>
+</div>
+<h3 class="text-xl font-bold mb-6 text-on-surface leading-snug group-hover:text-primary transition-colors">Lễ tân tòa nhà văn phòng - Ca sáng</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2 py-1 bg-secondary-container/30 text-secondary text-[10px] font-extrabold rounded">LỄ TÂN</span>
+<span class="px-2 py-1 bg-tertiary-container/30 text-tertiary text-[10px] font-extrabold rounded">CỐ ĐỊNH</span>
+</div>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-lg font-bold text-primary">10.500.000đ</span>
+<span class="text-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Quận 7
+                        </span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 mt-auto bg-slate-100 dark:bg-slate-900">
+<div class="flex flex-col items-center justify-center gap-6 w-full max-w-7xl mx-auto px-6">
+<div class="flex gap-8 text-sm font-medium text-slate-500 dark:text-slate-400">
+<a class="hover:underline transition-all" href="#">Về chúng tôi</a>
+<a class="hover:underline transition-all" href="#">Điều khoản</a>
+<a class="hover:underline transition-all" href="#">Hỗ trợ</a>
+</div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 text-center">
+                © 2024 JobNow Vietnam. Hành trình chuyên nghiệp của bạn.
+            </p>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-lg border-t border-slate-100 flex justify-around items-center py-3 z-50">
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-semibold">Trang chủ</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="text-[10px] font-bold">Tìm việc</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-[10px] font-semibold">Tin nhắn</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-semibold">Hồ sơ</span>
+</a>
+</div>
+</body></html>

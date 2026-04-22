@@ -1,4 +1,5 @@
 import { Job, BadgeType } from "../../types/job";
+import Link from "next/link";
 
 export function JobCard({ job }: { job: Job }) {
   const getBadgeClass = (badge: BadgeType) => {
@@ -19,7 +20,8 @@ export function JobCard({ job }: { job: Job }) {
   };
 
   return (
-    <div className="bg-white p-6 rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-transparent hover:border-blue-100 hover:shadow-lg transition-all duration-300">
+    <Link href={`/jobs/${job.id}`} className="block group">
+      <div className="bg-white p-6 rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-transparent group-hover:border-blue-100 group-hover:shadow-lg transition-all duration-300">
       <div className="flex flex-col sm:flex-row justify-between gap-4">
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-3">
@@ -51,7 +53,8 @@ export function JobCard({ job }: { job: Job }) {
             Ứng tuyển ngay
           </button>
         </div>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }

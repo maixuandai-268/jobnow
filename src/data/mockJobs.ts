@@ -10,6 +10,27 @@ export const mockJobs: Job[] = [
     schedule: "08:00 - 17:00 (T7 & CN)",
     postedAt: "Đăng 2 giờ trước",
     badge: "Gấp",
+    quantity: 5,
+    description: [
+      "Chào đón khách hàng, tìm hiểu nhu cầu và tư vấn các sản phẩm phù hợp tại cửa hàng.",
+      "Hướng dẫn khách hàng trải nghiệm sản phẩm trực tiếp tại showroom.",
+      "Kiểm tra hàng hóa, sắp xếp quầy kệ theo tiêu chuẩn trưng bày của thương hiệu.",
+      "Thực hiện thanh toán và hỗ trợ đóng gói sản phẩm cho khách hàng."
+    ],
+    requirements: [
+      "Độ tuổi từ 18 - 28, ngoại hình sáng, giao tiếp tốt.",
+      "Ưu tiên ứng viên có kinh nghiệm bán hàng hoặc dịch vụ khách hàng.",
+      "Nhanh nhẹn, trung thực và có tinh thần trách nhiệm cao.",
+      "Có thể làm việc xoay ca hoặc ca gãy theo yêu cầu."
+    ],
+    employer: {
+      name: "Nguyễn Minh Quân",
+      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuAle5FAaZUjPEy9XB24_Ydy21t-plBYOOAU3BRHy1wWFgkil3zydHTbyexHy1maB0OJnQHscRoP-uhqapkBm0tv4_unhYJ3REvm6FGDqmlQkgCA3L_p-qrfGr7KENQgJeiAV34WXg_DCtjo7O0yp1RdmhuBdFXgzpi7SiZcYQ_G5wa_XMh7ZaJYlhp_ZpCiYeUhKythv99Yu9KLkV1OvTZwz168bpds7INR6_v6DYWVTF3hbDT-TXVXaRPeeivw6M_0NyKy6UnJaqWo",
+      rating: 4.2,
+      type: "Cá nhân",
+      totalPosts: 12,
+      joinedDate: "03/2023"
+    }
   },
   {
     id: "2",
@@ -41,4 +62,44 @@ export const mockJobs: Job[] = [
     postedAt: "Đăng 2 ngày trước",
     badge: "Bán thời gian",
   },
+  {
+    id: "5",
+    title: "Nhân viên bán hàng siêu thị mini",
+    salary: 250000,
+    salaryUnit: "ca",
+    location: "Quận 7, TP. Hồ Chí Minh",
+    schedule: "Ca chiều (14:00 - 22:00)",
+    postedAt: "Đăng 3 giờ trước",
+    badge: "Bán thời gian",
+  },
+  {
+    id: "6",
+    title: "Shipper giao hàng nội thành",
+    salary: 500000,
+    salaryUnit: "ngày",
+    location: "Quận 10, TP. Hồ Chí Minh",
+    schedule: "Linh hoạt",
+    postedAt: "Đăng 4 giờ trước",
+    badge: "Nóng",
+  },
+  {
+    id: "7",
+    title: "Nhân viên trực tổng đài CSKH",
+    salary: 280000,
+    salaryUnit: "ca",
+    location: "Làm việc từ xa (Online)",
+    schedule: "Ca tối (18:00 - 23:00)",
+    postedAt: "Đăng 6 giờ trước",
+    badge: "Thời vụ",
+  },
+  {
+    id: "8",
+    title: "Phụ bếp nhà hàng lẩu nướng",
+    salary: 350000,
+    salaryUnit: "ca",
+    location: "Quận Bình Thạnh, TP. HCM",
+    schedule: "16:00 - 23:00 (Hàng ngày)",
+    postedAt: "Đăng 8 giờ trước",
+    badge: "Gấp",
+  }
 ];
