@@ -2,13 +2,10 @@ export default function Loading() {
   return (
     <div className="flex-1 w-full flex flex-col items-center justify-center min-h-[70vh] bg-surface">
       <div className="relative w-20 h-20 flex items-center justify-center">
-        {/* Outer subtle ring */}
-        <div className="absolute inset-0 rounded-full border-[4px] border-primary/10"></div>
+        <div className="absolute inset-0 rounded-full border-4 border-primary/10"></div>
         
-        {/* Spinning primary ring */}
-        <div className="absolute inset-0 rounded-full border-[4px] border-primary border-r-transparent animate-spin"></div>
+        <div className="absolute inset-0 rounded-full border-4 border-primary border-r-transparent animate-spin"></div>
         
-        {/* Center icon */}
         <span className="material-symbols-outlined text-3xl text-primary animate-pulse">
           work
         </span>

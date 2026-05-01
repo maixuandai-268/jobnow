@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
 
@@ -7,7 +8,7 @@ export default function Home() {
       <Navbar />
 
       <main className="pt-20">
-        <section className="hero-gradient min-h-[600px] flex items-center px-6">
+        <section className="hero-gradient min-h-150 flex items-center px-6">
           <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h1 className="text-5xl md:text-7xl font-extrabold text-on-background leading-tight tracking-tighter">
@@ -42,10 +43,10 @@ export default function Home() {
             </div>
 
             <div className="hidden lg:block relative">
-              <div className="w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl rotate-2">
+              <div className="w-full h-125 rounded-3xl overflow-hidden shadow-2xl rotate-2">
                 <img className="w-full h-full object-cover" alt="Workers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxLOktZ0mPXplZZPAPqqlS5dF511VLCg6BdlE_LtHnptQkGnxqMRZccFAZq2AL9kSizbGoERUbQ5u-2CiN4TNb7BUMPGAWBQmiyVr3kOFWfGh0elHR7L1Fy0MiynynDQDt3ebZSNygRfGdus_jhVeYW9ELgwsY3fWzob7Le_y_Kc-Q5x9fZ36h1gGwBpHYt4F6fomcaLP4qpiYzT58f_1CbJCNUI0CEbPS3axZqExm-IbGF4G1BH5L5K1VF0ZlVh_299m60DM-8ewk" />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[200px]">
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-50">
                 <div className="text-tertiary font-black text-2xl">150k/giờ</div>
                 <div className="text-xs font-bold text-outline">Mức lương trung bình cho việc bốc xếp</div>
               </div>
